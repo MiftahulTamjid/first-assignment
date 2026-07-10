@@ -66,3 +66,40 @@ nav{
     border-style: none;
     cursor: pointer;
 }
+
+.speakers-parent{
+    padding: 50px;
+    text-align: center;
+}
+.speakers-parent h1{
+    font-size: 56px;
+}
+.speakers-parent .speakers{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 50px;
+}
+.speakers .box .details{
+    text-align: left;
+    padding: 15px;
+}
+.box{
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.details h6{
+    color:  #2563ebFF;;
+}
+.details h4{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.details p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #575757FF;
+}
