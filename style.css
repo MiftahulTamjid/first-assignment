@@ -1,0 +1,25 @@
+.common-margin{
+    max-width: 1200px;
+    margin: auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.sections{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    color: #575757FF;
+    cursor: pointer;
+}
+.common-btn{
+    background-color:  #1d4ed8FF;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
