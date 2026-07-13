@@ -191,14 +191,225 @@ nav{
     /* padding: 10px; */
     align-items: center;
     height: 70px;
+    
 }
-.footer-right ul{
+.footer-right ul {
+    
     display: flex;
     list-style: none;
-    /* align-items: center; */
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
     
 }
 .footer-left{
     margin-left: 50px;
     /* justify-content: center; */
+    align-items: center;
+}
+
+
+
+/* ============================================
+   Sponsor CTA Section
+   Namespaced under .sponsor-cta to avoid collisions.
+   Swap placeholder colors/vars for brand colors later.
+============================================ */
+
+.sponsor-cta {
+  --sponsor-bg: #f4f4f4;
+  --sponsor-text: #1a1a1a;
+  --sponsor-subtext: #555555;
+  --sponsor-accent: #007bff;
+  --sponsor-accent-hover: #0056b3;
+  --sponsor-card-bg: #ffffff;
+  --sponsor-border: #e0e0e0;
+
+  background-color: var(--sponsor-bg);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+.sponsor-cta__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+/* Content block */
+.sponsor-cta__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 640px;
+}
+
+.sponsor-cta__heading {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  font-weight: 800;
+  color: var(--sponsor-text);
+  line-height: 1.2;
+}
+
+.sponsor-cta__subheading {
+  margin: 0;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: var(--sponsor-subtext);
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.sponsor-cta__button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.85rem 2rem;
+  background-color: var(--sponsor-accent);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.sponsor-cta__button:hover,
+.sponsor-cta__button:focus-visible {
+  background-color: var(--sponsor-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
+}
+
+.sponsor-cta__button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.sponsor-cta__button:focus-visible {
+  outline: 2px solid var(--sponsor-accent);
+  outline-offset: 3px;
+}
+
+/* Logos / social proof */
+.sponsor-cta__logos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sponsor-cta__logos-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sponsor-subtext);
+}
+
+.sponsor-cta__logos-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.sponsor-cta__logo-placeholder {
+  background-color: var(--sponsor-card-bg);
+  border: 1px dashed var(--sponsor-border);
+  border-radius: 10px;
+  padding: 1.25rem 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.sponsor-cta__logo-placeholder:hover {
+  border-color: var(--sponsor-accent);
+  color: var(--sponsor-accent);
+}
+
+/* ============================================
+   Responsive breakpoints
+============================================ */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .sponsor-cta {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .sponsor-cta__logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .sponsor-cta {
+    padding: 2rem 1rem;
+    border-radius: 12px;
+  }
+
+  .sponsor-cta__button {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   Logo styling (replaces .sponsor-cta__logo-placeholder)
+============================================ */
+
+.sponsor-cta__logo {
+  background-color: var(--sponsor-card-bg);
+  border: 1px solid var(--sponsor-border);
+  border-radius: 10px;
+  padding: 1.1rem 0.75rem;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: #8a8a8a; /* controls icon + text color via currentColor */
+  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sponsor-cta__logo:hover {
+  border-color: var(--sponsor-accent);
+  color: var(--sponsor-accent);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.12);
+}
+
+.sponsor-cta__logo-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.sponsor-cta__logo-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* Mobile: stack icon left of text on narrow single-column cards */
+@media (max-width: 480px) {
+  .sponsor-cta__logo {
+    flex-direction: row;
+  }
 }
