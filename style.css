@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
 }
+
 .common-margin{
     max-width: 1200px;
     margin: auto;
@@ -12,7 +13,15 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
+    padding: 12px 24px;
+    gap: 20px;
+}
+
+
+nav img {
+    height: 36px;
+    width: auto;
+    display: block;
 }
 .sections{
     display: flex;
@@ -20,7 +29,15 @@ nav{
     gap: 15px;
     color: #575757FF;
     cursor: pointer;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
 }
+/* .sections li {
+    display: flex;
+    align-items: center;
+} */
+
 .common-btn{
     background-color:  #1d4ed8FF;
     padding: 8px 15px;
@@ -30,6 +47,7 @@ nav{
     color: white;
     border-style: none;
     cursor: pointer;
+    line-height: 1;
     
 }
 /* Navigation ends */
@@ -188,7 +206,7 @@ nav{
     background-color: #0D1B2A;
     color: #FFFFFF;
     font-weight: 400;
-    /* padding: 10px; */
+    padding: 20px 60px;
     align-items: center;
     height: 70px;
     
@@ -203,6 +221,7 @@ nav{
     
 }
 .footer-left{
+  
     margin-left: 50px;
     /* justify-content: center; */
     align-items: center;
